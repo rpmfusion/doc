@@ -1,0 +1,58 @@
+diff -urN doc-2.2.3.dist/doc.8 doc-2.2.3/doc.8
+--- doc-2.2.3.dist/doc.8	2007-06-28 13:38:30.000000000 +1000
++++ doc-2.2.3/doc.8	2007-06-28 13:45:52.000000000 +1000
+@@ -84,18 +84,18 @@
+ before the domain names.
+ .SH FILES CREATED
+ In addition to the standard output, \fIdoc\fP produces a log file
+-named log.<domain_name>, which it places in the current
+-directory.  This file includes all "verbose" level comments,
+-followed by the nameserver responses to the queries (in a
+-slightly masticated form).
++named log.<domain_name>, which it places in the .doclogs directory
++in the users home directory.  This file includes all "verbose"
++level comments, followed by the nameserver responses to the queries
++(in a slightly masticated form).
+ .sp 1
+ While running, \fIdoc\fP creates several temporary files in the
+-current directory.  These files have names of the form:
++~/.doclogs/ directory.  These files have names of the form:
+ .sp 1
+ 	<domain_name>.* 
+ .SH FILES USED
+ \fIDoc\fP expects the auxiliary files: doc1.awk, doc3.awk, and
+-doc4.awk to reside in the current working directory.  This can be
++doc4.awk to reside in the current libexec directory.  This can be
+ overridden by changing the program to look for them in a directory
+ indicated in a shell variable intended for this purpose.  If your
+ System Administrator installed \fIdoc\fP, they'll need to make the
+diff -urN doc-2.2.3.dist/doc.txt doc-2.2.3/doc.txt
+--- doc-2.2.3.dist/doc.txt	2007-06-28 13:38:30.000000000 +1000
++++ doc-2.2.3/doc.txt	2007-06-28 13:46:50.000000000 +1000
+@@ -92,19 +92,20 @@
+            the domain names.
+ 
+  FILES CREATED
+-      In addition to the standard output, doc produces a log file named
+-      log.<domain_name>, which it places in the current directory.  This
+-      file includes all "verbose" level comments, followed by the nameserver
+-      responses to the queries (in a slightly masticated form).
++      In addition to the standard output, doc produces a log file
++      named log.<domain_name>, which it places in the .doclogs directory
++      in the users home directory.  This file includes all "verbose"
++      level comments, followed by the nameserver responses to the queries
++      (in a slightly masticated form).
+ 
+-      While running, doc creates several temporary files in the current
++      While running, doc creates several temporary files in the ~/.doclogs/
+       directory.  These files have names of the form:
+ 
+            <domain_name>.*
+ 
+  FILES USED
+       Doc expects the auxiliary files: doc1.awk, doc3.awk, and doc4.awk to
+-      reside in the current working directory.  This can be overridden by
++      reside in the libexec working directory.  This can be overridden by
+       changing the program to look for them in a directory indicated in a
+       shell variable intended for this purpose.  If your System
+       Administrator installed doc, they'll need to make the necessary
