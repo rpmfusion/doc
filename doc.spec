@@ -1,7 +1,7 @@
 Summary: Diagnose unhealthy DNS domains
 Name: doc
 Version: 2.2.3
-Release: 6%{?dist}
+Release: 7%{?dist}
 License: Distributable
 URL: http://www.shub-internet.org/brad/dns/
 Group: Applications/Internet
@@ -58,6 +58,9 @@ rm -rf %{buildroot}
 %{_libexecdir}/*
 
 %changelog
+* Sun Aug 31 2014 Sérgio Basto <sergio@serjux.com> - 2.2.3-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
+
 * Tue Mar 12 2013 Nicolas Chauvet <kwizart@gmail.com> - 2.2.3-6
 - https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
