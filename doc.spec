@@ -1,7 +1,7 @@
 Summary: Diagnose unhealthy DNS domains
 Name: doc
 Version: 2.2.3
-Release: 11%{?dist}
+Release: 12%{?dist}
 License: Distributable
 URL: http://www.shub-internet.org/brad/dns/
 Group: Applications/Internet
@@ -58,6 +58,9 @@ rm -rf %{buildroot}
 %{_libexecdir}/*
 
 %changelog
+* Tue Mar 05 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 2.2.3-12
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Sun Aug 19 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 2.2.3-11
 - Rebuilt for Fedora 29 Mass Rebuild binutils issue
 
