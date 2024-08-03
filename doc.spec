@@ -20,7 +20,7 @@ required parameter is the valid domain name of an existing domain.
 
 %prep
 %setup -q
-%patch1 -p1
+%patch -P1 -p1
 
 sed -i "s|#set auxd=/users/brad/bin/doc-2.2.3/|set auxd=%{_libexecdir}/|g" doc
 sed -i 's|set logdir="."|set logdir="~/.doclogs/"\nmkdir -p $logdir|' doc
